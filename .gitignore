@@ -1,0 +1,10 @@
+.DS_Store
+__pycache__/
+*.pyc
+*.o
+read_smc_status
+smc-firmware.bin
+kernelcache*
+thermalmonitord*
+*.im4p
+*.ipsw

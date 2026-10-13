@@ -1,0 +1,42 @@
+[
+  {
+    "file": "/tmp/powerlog_old/powerlog_2026-10-04_A39E2220.PLSQL",
+    "samples": 241,
+    "min": 2.0000009536743164,
+    "max": 65.0,
+    "at_2_w": 0,
+    "above_10_w": 191
+  },
+  {
+    "file": "/tmp/powerlog_old/powerlog_2026-10-05_B895309F.PLSQL",
+    "samples": 206,
+    "min": 2.30180025100708,
+    "max": 65.0,
+    "at_2_w": 0,
+    "above_10_w": 180
+  },
+  {
+    "file": "/tmp/powerlog_old/powerlog_2026-10-06_D3B079E3.PLSQL",
+    "samples": 245,
+    "min": 4.053299427032471,
+    "max": 65.0,
+    "at_2_w": 0,
+    "above_10_w": 233
+  },
+  {
+    "file": "/tmp/powerlog_old/powerlog_2026-10-08_FB74A936.PLSQL",
+    "samples": 152,
+    "min": 2.30180025100708,
+    "max": 65.0,
+    "at_2_w": 0,
+    "above_10_w": 146
+  },
+  {
+    "file": "/var/db/powerlog/Library/BatteryLife/CurrentPowerlog.PLSQL",
+    "samples": 35,
+    "min": 2.0,
+    "max": 65.0,
+    "at_2_w": 32,
+    "above_10_w": 2
+  }
+]

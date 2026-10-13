@@ -1,0 +1,32 @@
+{
+  "scope": "isolated memory only",
+  "sha256": "010387bee26ac2937f2b835a9b54c1bde251334cac8ed23b12080d71bd8623fa",
+  "before": {
+    "error_count": 12,
+    "current_error": 23,
+    "debounce": 24,
+    "disabled": 0,
+    "fault": 1
+  },
+  "after_reset_command_11": {
+    "error_count": 0,
+    "current_error": 0,
+    "debounce": 0,
+    "disabled": 0,
+    "fault": 0
+  },
+  "after_force_fault_command_13": {
+    "error_count": 0,
+    "current_error": 0,
+    "debounce": 0,
+    "disabled": 1,
+    "fault": 1
+  },
+  "after_next_fault_check": {
+    "error_count": 0,
+    "current_error": 0,
+    "debounce": 2,
+    "disabled": 1,
+    "fault": 0
+  }
+}

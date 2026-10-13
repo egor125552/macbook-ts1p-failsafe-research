@@ -1,0 +1,38 @@
+captured=2026-10-13T15:26:17+0300
+kern.sched_recommended_cores=63
+service=3091 name=AppleSMCKeysEndpoint
+open=0x0 conn=3347
+Ts0P info kr=0x0 result=0 status=0 len=80 size=4 type=0x666c7420 attributes=0x85
+Ts0P read kr=0x0 result=0 status=0 raw=00000000 float=0
+Ts1P info kr=0x0 result=0 status=0 len=80 size=4 type=0x666c7420 attributes=0x85
+Ts1P read kr=0x0 result=0 status=0 raw=00000000 float=0
+SES0 info kr=0x0 result=0 status=0 len=80 size=4 type=0x6865785f attributes=0x81
+SES0 read kr=0x0 result=0 status=0 raw=00001800 float=2.20405e-39
+SEB0 info kr=0x0 result=0 status=0 len=80 size=4 type=0x6865785f attributes=0x81
+SEB0 read kr=0x0 result=0 status=0 raw=00001000 float=1.46937e-39
+SEB1 info kr=0x0 result=0 status=0 len=80 size=4 type=0x6865785f attributes=0x81
+SEB1 read kr=0x0 result=0 status=0 raw=00000000 float=0
+SEB2 info kr=0x0 result=0 status=0 len=80 size=4 type=0x6865785f attributes=0x81
+SEB2 read kr=0x0 result=0 status=0 raw=00000000 float=0
+SEB3 info kr=0x0 result=0 status=0 len=80 size=4 type=0x6865785f attributes=0x81
+SEB3 read kr=0x0 result=0 status=0 raw=00000000 float=0
+SEB4 info kr=0x0 result=0 status=0 len=80 size=4 type=0x6865785f attributes=0x81
+SEB4 read kr=0x0 result=0 status=0 raw=00000000 float=0
+SEB5 info kr=0x0 result=0 status=0 len=80 size=4 type=0x6865785f attributes=0x81
+SEB5 read kr=0x0 result=0 status=0 raw=00000000 float=0
+SEB6 info kr=0x0 result=0 status=0 len=80 size=4 type=0x6865785f attributes=0x81
+SEB6 read kr=0x0 result=0 status=0 raw=00000000 float=0
+SEB7 info kr=0x0 result=0 status=0 len=80 size=4 type=0x6865785f attributes=0x81
+SEB7 read kr=0x0 result=0 status=0 raw=00000000 float=0
+voPp info kr=0x0 result=0 status=0 len=80 size=4 type=0x666c7420 attributes=0x85
+voPp read kr=0x0 result=0 status=0 raw=00008242 float=65
+voUp info kr=0x0 result=0 status=0 len=80 size=4 type=0x666c7420 attributes=0x85
+voUp read kr=0x0 result=0 status=0 raw=0000f041 float=30
+xPPT info kr=0x0 result=0 status=0 len=80 size=4 type=0x666c7420 attributes=0x85
+xPPT read kr=0x0 result=0 status=0 raw=00000040 float=2
+xUPT info kr=0x0 result=0 status=0 len=80 size=4 type=0x666c7420 attributes=0x85
+xUPT read kr=0x0 result=0 status=0 raw=00002040 float=2.5
+SFBN info kr=0x0 result=0 status=0 len=80 size=4 type=0x6865785f attributes=0x81
+SFBN read kr=0x0 result=0 status=0 raw=00000012 float=4.03897e-28
+SFBS info kr=0x0 result=0 status=0 len=80 size=4 type=0x6865785f attributes=0x81
+SFBS read kr=0x0 result=0 status=0 raw=00000012 float=4.03897e-28
