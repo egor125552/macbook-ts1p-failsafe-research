@@ -16,6 +16,18 @@ Extracts selected SMC series from PowerLog SQLite databases in read-only mode.
 
 Decodes exported SMC input-fault masks and locks down the byte/bit interpretation used for `SEB0` / `SES0`.
 
+## Official restore-image bootstrap
+
+### `fetch_official_restore.py`
+
+Pins the exact `Mac16,12` / build `26A428` restore image to its official `updates.cdn-apple.com` URL, expected byte size and SHA-256. It can print the URL, verify an existing IPSW, or download/resume the roughly 26.6 GB IPSW and verify it before use. No Apple binary is stored in this repository.
+
+```sh
+python3 tools/fetch_official_restore.py --url-only
+python3 tools/fetch_official_restore.py --download ./downloads
+python3 tools/fetch_official_restore.py --verify ./downloads/UniversalMac_27.0_26A428_Restore.ipsw
+```
+
 ## Offline firmware tools
 
 These never communicate with the live SMC.

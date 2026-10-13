@@ -24,6 +24,7 @@ This repository contains the measurements, reverse-engineering notes, original a
 - **Negative results and red herrings:** [`engineers/negative-results.md`](engineers/negative-results.md)
 - **Case/service timeline:** [`CASE_TIMELINE.md`](CASE_TIMELINE.md)
 - **Reproduction guide:** [`REPRODUCING.md`](REPRODUCING.md)
+- **Official 26A428 restore-image helper:** [`tools/fetch_official_restore.py`](tools/fetch_official_restore.py)
 - **Safety notes:** [`SAFETY.md`](SAFETY.md)
 
 ## What is proven
@@ -65,7 +66,7 @@ The fact that both Ts0P and Ts1P currently read zero makes a shared path/control
 
 `data/` contains full measurement series that can be redistributed: 879 xPPT/xUPT records and 900 Ts0P/Ts1P records from the available PowerLog databases, plus the isolated replay result and selected scheduler/trace evidence.
 
-`tools/` contains code written during this investigation. Apple firmware, kernelcache, `thermalmonitord`, and other Apple binaries are **not** included. Bring legally obtained local copies if you want to reproduce binary analysis.
+`tools/` contains code written during this investigation. Apple firmware, kernelcache, `thermalmonitord`, and other Apple binaries are **not** mirrored in Git. For this exact case, `tools/fetch_official_restore.py` pins the official Apple CDN URL, byte size and SHA-256 for `UniversalMac_27.0_26A428_Restore.ipsw`, and can download/resume and verify it automatically. The restore image is about 26.6 GB.
 
 ## Firmware identity
 

@@ -65,16 +65,46 @@ python3 tools/powerlog_extract.py \
 
 The already extracted data used by this report are included in `data/` so binary/system database access is not required to review the result.
 
-## 4. Offline SMC firmware replay
+## 4. Get the exact official Apple restore image
 
-The repository does **not** contain Apple firmware.
+The repository does **not** mirror Apple firmware, but it pins the exact official Apple restore image used by this case so reproduction does not depend on hunting for a matching build.
 
-If you lawfully obtain the exact matching SMC image, verify:
+For `Mac16,12` / `J713AP` / macOS 27.0 build `26A428`:
+
+```sh
+python3 tools/fetch_official_restore.py --download ./downloads
+```
+
+The helper downloads directly from `updates.cdn-apple.com`, supports resuming a partial `.part` file, checks the exact byte size, and refuses the image unless SHA-256 matches:
+
+```text
+file: UniversalMac_27.0_26A428_Restore.ipsw
+size: 26626436228 bytes
+SHA-256: 2a5d3c695d501022b7fad9adaffcf2627bcb867d993fb5662dcd41bac99a2836
+```
+
+To print the pinned Apple URL without downloading 26.6 GB:
+
+```sh
+python3 tools/fetch_official_restore.py --url-only
+```
+
+To verify an IPSW you already have:
+
+```sh
+python3 tools/fetch_official_restore.py --verify /path/to/UniversalMac_27.0_26A428_Restore.ipsw
+```
+
+The IPSW is the Apple restore container, not the final flat SMC image consumed by the emulator. After extracting the matching SMC payload locally, verify:
 
 ```text
 name: AppleSMCFirmware_H16_4-7372.1.3.j713.REL
 SHA-256: 010387bee26ac2937f2b835a9b54c1bde251334cac8ed23b12080d71bd8623fa
 ```
+
+`tools/extract_im4p.py` is included for the IM4P/decompression step used during the investigation. Extraction details can vary with Apple restore-container layout, so always verify the final SMC SHA-256 before using build-specific offsets.
+
+## 5. Offline SMC firmware replay
 
 Install Python dependency:
 
@@ -100,7 +130,7 @@ Ts1P cleared   → package 65 W, utility 30 W
 
 See `data/smc-failsafe-replay.json` for the recorded result.
 
-## 5. Fault-mask decoder
+## 6. Fault-mask decoder
 
 The small independent decoder can be tested without macOS:
 
@@ -116,7 +146,7 @@ Expected bit sets:
 0x1800 → [11, 12]
 ```
 
-## 6. Raw trace evidence
+## 7. Raw trace evidence
 
 The public trace files in `data/traces/` were captured from the investigated machine. They contain kernel trace rows and scheduler-mask timing used to validate the CLPC limiter chain.
 
@@ -124,7 +154,7 @@ The debug IDs are documented in `engineers/ppm-clpc.md` and `engineers/offsets-j
 
 Kernel tracing often requires elevated privileges and may differ by macOS release. The repository does not require a reader to reproduce kernel tracing in order to inspect the included evidence.
 
-## 7. Binary-level verification
+## 8. Binary-level verification
 
 For researchers repeating static analysis on the same build:
 
